@@ -8,7 +8,7 @@ import {
 import { updateNotification } from "../Notification";
 import { getToken } from "../utils/session";
 
-const baseURL = "https://steve95-shoppingify.herokuapp.com/";
+const baseURL = "https://rails-724d.onrender.com/";
 
 export const updateCartName =
   (name = "", status = "", active = true, id) =>

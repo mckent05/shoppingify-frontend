@@ -15,13 +15,6 @@ const initialState = {
   itemDetails: {},
 };
 
-// const handleDeleteItem = (state, payload) => {
-//   // const item = state.list.find(
-//   //   (item) => item.category.toLowerCase() === payload.category.toLowerCase()
-//   // );
-//   // item.items.filter((item) => item.id !== payload.id);
-//   // return state;
-// };
 
 export const handleLoading = (status) => ({
   type: FETCH_ITEMS_STATUS,
