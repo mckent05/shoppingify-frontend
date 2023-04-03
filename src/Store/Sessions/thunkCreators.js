@@ -7,7 +7,7 @@ import {
 import { clearSession, getToken } from "../utils/session";
 import { updateNotification } from "../Notification";
 
-const baseURL = "https://rails-724d.onrender.com/";
+const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const handleSignIn = (username, password) => async (dispatch) => {
   const userDetails = { user: { username, password } };

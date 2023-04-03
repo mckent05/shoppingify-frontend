@@ -8,7 +8,7 @@ import {
 import { updateNotification } from "../Notification";
 import { getToken } from "../utils/session";
 
-const baseURL = "https://rails-724d.onrender.com/";
+const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const updateCartName =
   (name = "", status = "", active = true, id) =>
@@ -64,6 +64,7 @@ export const createNewCartItem =
     }
     dispatch(updateNotification(response.message, response.status));
     dispatch(loadingStatus(false));
+    console.log(userToken)
   };
 
 export const deleteItemFromCart = (category, id) => async (dispatch) => {

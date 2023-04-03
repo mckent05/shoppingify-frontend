@@ -11,7 +11,7 @@ import {
   addNewCategory,
 } from "./pageReducer";
 
-const baseURL = "https://rails-724d.onrender.com/";
+const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const fetchItems = () => async (dispatch) => {
   const token = getToken();
