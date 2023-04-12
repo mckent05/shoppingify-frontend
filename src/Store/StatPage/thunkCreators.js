@@ -1,7 +1,7 @@
 import { loadingStatus, getStatistics } from "./Statisticsreducer";
 import { getToken } from "../utils/session";
 
-const baseURL = "https://rails-y3qo.onrender.com/";
+const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const fetchStatistics = () => async (dispatch) => {
   const token = getToken();
