@@ -74,7 +74,7 @@ const itemsReducer = (state = initialState, action) => {
       return {
         ...state,
         list: action.payload.sort((a, b) =>
-          a.category.name.localeCompare(b.category.name)
+          a.category.localeCompare(b.category)
         ),
       };
 

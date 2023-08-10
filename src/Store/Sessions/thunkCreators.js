@@ -3,11 +3,10 @@ import {
   userSignUp,
   userSignIn,
   userSignOut,
-} from "./sessionReducer";
-import { clearSession, getToken } from "../utils/session";
+} from "./sessionSlice";
+import { clearSession, getToken, baseURL } from "../utils/session";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import { updateNotification } from "../Notification";
-
-const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const handleSignIn = (username, password) => async (dispatch) => {
   const userDetails = { user: { username, password } };

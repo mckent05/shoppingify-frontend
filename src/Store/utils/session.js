@@ -8,4 +8,6 @@ const clearSession = () => {
   localStorage.removeItem("user-token");
 };
 
-export { getToken, clearSession };
+const baseURL = "http://localhost:3000/"
+
+export { getToken, clearSession, baseURL };

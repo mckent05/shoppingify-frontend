@@ -1,5 +1,5 @@
 import { updateNotification } from "../Notification";
-import { getToken } from "../utils/session";
+import { getToken, baseURL } from "../utils/session";
 import {
   getItems,
   handleLoading,
@@ -10,8 +10,6 @@ import {
   fetchCategories,
   addNewCategory,
 } from "./pageReducer";
-
-const baseURL = "https://shoppingify-steve.herokuapp.com/";
 
 export const fetchItems = () => async (dispatch) => {
   const token = getToken();

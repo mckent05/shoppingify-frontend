@@ -1,7 +1,5 @@
 import { fetchCarts, loading, showCartDetails } from "./historyreducer";
-import { getToken } from "../utils/session";
-
-const baseURL = "https://shoppingify-steve.herokuapp.com/";
+import { getToken, baseURL } from "../utils/session";
 
 const reducerFunction = (data) => {
   const steven = data.reduce((acc, value) => {

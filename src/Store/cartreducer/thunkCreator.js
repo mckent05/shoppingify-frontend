@@ -6,9 +6,7 @@ import {
   completeCart,
 } from "./cartreducer";
 import { updateNotification } from "../Notification";
-import { getToken } from "../utils/session";
-
-const baseURL = "https://shoppingify-steve.herokuapp.com/";
+import { getToken, baseURL } from "../utils/session";
 
 export const updateCartName =
   (name = "", status = "", active = true, id) =>

@@ -1,7 +1,5 @@
 import { loadingStatus, getStatistics } from "./Statisticsreducer";
-import { getToken } from "../utils/session";
-
-const baseURL = "https://shoppingify-steve.herokuapp.com/";
+import { getToken, baseURL } from "../utils/session";
 
 export const fetchStatistics = () => async (dispatch) => {
   const token = getToken();

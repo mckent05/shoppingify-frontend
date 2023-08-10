@@ -2,7 +2,7 @@ import { combineReducers, applyMiddleware, createStore } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 import itemsReducer from "./itemspagereducer/pageReducer";
-import sessionReducer from "./Sessions/sessionReducer";
+import sessionReducer from "./Sessions/sessionSlice";
 import cartReducer from "./cartreducer/cartreducer";
 import notificationReducer from "./Notification";
 import historyReducer from "./historyPage/historyreducer";
