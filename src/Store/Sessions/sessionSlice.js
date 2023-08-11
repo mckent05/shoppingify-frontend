@@ -5,7 +5,7 @@ const initialState = {
   isLoading: false,
   isSignedUp: false,
   isSignedIn: !!getToken(),
-  isSignedOut: false,
+  isSignedOut: true,
 };
 
 const sessionSlice = createSlice({
@@ -26,8 +26,8 @@ const sessionSlice = createSlice({
     }),
     userSignOut: (state) => ({
       ...state,
-      isSignedIn: true,
-      isSignedOut: false,
+      isSignedIn: false,
+      isSignedOut: true,
     }),
   },
 });

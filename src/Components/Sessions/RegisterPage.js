@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { makeStyles } from "@mui/styles";
 import { useDispatch } from "react-redux";
 import { handleSignUp } from "../../Store/Sessions/thunkCreators";
@@ -81,16 +82,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const RegisterPage = ({ loading, signedUp }) => {
+const RegisterPage = () => {
   const classes = useStyles();
   const [formErrorMessage, setFormErrorMessage] = useState({});
+
+  const sessionDetails = useSelector((state) => state.sessions);
+
+  const { isLoading } = sessionDetails
 
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
   const [userDetails, setUserDetails] = useState({
-    userName: "",
+    username: "",
     password: "",
     email: "",
     confirmPassword: "",
@@ -108,13 +113,9 @@ const RegisterPage = ({ loading, signedUp }) => {
       return;
     }
     await dispatch(
-      handleSignUp(
-        userDetails.userName,
-        userDetails.email,
-        userDetails.password
-      )
+      handleSignUp(userDetails)
     );
-    signedUp && navigate("/login");
+    navigate("/login");
   };
 
   useEffect(() => {
@@ -138,7 +139,7 @@ const RegisterPage = ({ loading, signedUp }) => {
             <Input
               ariaLabel="username"
               label="Username"
-              name="userName"
+              name="username"
               type="text"
               handle={handleInput}
             />
@@ -187,7 +188,7 @@ const RegisterPage = ({ loading, signedUp }) => {
                 </FormHelperText>
               </FormControl>
             </Grid>
-            <Submit title="Register" loading={loading} />
+            <Submit title="Register" loading={ isLoading } />
           </Grid>
         </form>
       </Box>

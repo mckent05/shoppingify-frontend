@@ -17,7 +17,7 @@ function App() {
 
   const notificationDetails = useSelector((state) => state.notification);
 
-  const { isLoading, isSignedUp, isSignedIn, isSignedOut } = sessionDetails;
+  const { isLoading, isSignedIn, isSignedOut } = sessionDetails;
 
   const { notification, notificationStatus } = notificationDetails;
 
@@ -127,7 +127,7 @@ function App() {
           />
           <Route
             path="/register"
-            element={<RegisterPage loading={isLoading} signedUp={isSignedUp} />}
+            element={<RegisterPage />}
           />
         </Routes>
       </div>

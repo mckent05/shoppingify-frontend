@@ -90,7 +90,7 @@ const LoginPage = ({ loading, signedIn }) => {
   const navigate = useNavigate();
 
   const [userDetails, setUserDetails] = useState({
-    userName: "",
+    username: "",
     password: "",
   });
 
@@ -101,7 +101,7 @@ const LoginPage = ({ loading, signedIn }) => {
 
   const signIn = async (e) => {
     e.preventDefault();
-    await dispatch(handleSignIn(userDetails.userName, userDetails.password));
+    await dispatch(handleSignIn(userDetails));
     signedIn && navigate("/");
   };
 
@@ -129,7 +129,7 @@ const LoginPage = ({ loading, signedIn }) => {
             <Input
               ariaLabel="username"
               label="Username"
-              name="userName"
+              name="username"
               type="text"
               handle={handleInput}
             />
