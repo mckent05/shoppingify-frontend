@@ -52,7 +52,8 @@ const ButtonControl = ({ cat_name, id, change, name, unit, alert }) => {
   const { cartName } = cart;
 
   const handleDeleteItem = async (category, id) => {
-    await dispatch(deleteItemFromAPI(category, id));
+    const itemDetails = { category, id }
+    await dispatch(deleteItemFromAPI(itemDetails));
     change("cart");
   };
 
