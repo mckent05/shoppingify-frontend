@@ -8,6 +8,6 @@ const clearSession = () => {
   localStorage.removeItem("user-token");
 };
 
-const baseURL = "http://localhost:3000/"
+const baseURL = "https://rails-6d8g.onrender.com";
 
 export { getToken, clearSession, baseURL };

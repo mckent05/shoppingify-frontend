@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Navbar/NavBar";
 import { useTheme, useMediaQuery, Grid } from "@mui/material";
-import { fetchItems } from "../../Store/itemspagereducer/thunkCreators";
+import {
+  fetchItems,
+  fetchItemDetails,
+} from "../../Store/itemspagereducer/thunkCreators";
 import { makeStyles } from "@mui/styles";
 import { useDispatch } from "react-redux";
 import { Outlet } from "react-router-dom";
@@ -65,7 +68,7 @@ const Main = ({ cart, details, changeView, addItem, signedIn, alert }) => {
   useEffect(() => {
     dispatch(fetchItems());
     dispatch(getAllCategory());
-  }, []);
+  }, [dispatch]);
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 

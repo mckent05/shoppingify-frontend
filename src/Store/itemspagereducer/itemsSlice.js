@@ -11,14 +11,14 @@ const initialState = {
 const itemsSlice = createSlice({
   name: "itemsReducer",
   initialState,
-  reducer: {
+  reducers: {
     handleLoading: (state, action) => ({
       ...state,
       isLoading: action.payload,
     }),
     loadingDetails: (state, action) => ({
       ...state,
-      loadingItem: action.payload,
+      loadingItems: action.payload,
     }),
     getItems: (state, action) => ({
       ...state,
